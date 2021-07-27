@@ -1,0 +1,99 @@
+*,*::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #212121;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    background: #fff;
+    border-radius: 0.6rem;
+    width: 80vmin;
+    height: 82vmin;
+    box-shadow: 2px 3px 20px rgba(0,0,0,0.6);
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    border: 1px solid black;
+    position: relative;
+}
+
+.head {
+    background: url("../Assets/images/in-snake-head-clipart-snake-head-cartoon-11562915033zdtswr66u1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1);
+}
+
+.food {
+    background: url("../Assets/images/1480627.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.snake_body {
+    background: #6fcf00;
+    border-radius: 0.3rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transform: scale(0.9);
+}
+
+.score-board {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#SCORE,#HIGH_SCORE {
+    
+    font-size: 30px;
+    color: rgba(255, 255, 255,0.6);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Itim', cursive;
+}
+
+#HIGH_SCORE {
+    font-size: 34px;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999999999999;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Itim', cursive;
+    animation: popup 1s infinite;
+    color: #000;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
